@@ -63,7 +63,7 @@ project
 │       └───validation
 │           ├───non_violent
 │           └───violent
-└───data_preparation
+├───data_preparation
 │   ...
 ```
 In order to run the audio transformations pipeline, use the following bash script:
