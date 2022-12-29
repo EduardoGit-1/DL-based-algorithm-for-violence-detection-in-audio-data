@@ -47,7 +47,7 @@ In the table bellow, all the required changes are presented:
 | ```DATASET_DIR``` | Should be changed the metadata CSV file path.
 | ```BASE_FEATURE_SAVE_DIR``` | Should be changed to the directory where the audio features will be saved.
 
-Inside your ```BASE_FEATURE_SAVE_DIR``` create five subfolders: ```cqt```, ```mfcc```, ```stft```, ```mel``` and ```chroma```. These folders represent the location where the data of each of the audio feature will be stored. Inside of each of these create a folder for each set: ```training```, ```validation``` and ```testing``` which in turn should have two subfolders containing the two possible labels for your use case.
+Inside your ```BASE_FEATURE_SAVE_DIR``` create five subfolders: ```cqt```, ```mfcc```, ```stft```, ```mel``` and ```chroma```. These folders represent the location where each audio feature data will be stored. Inside of each of these create a folder for each set: ```training```, ```validation``` and ```testing``` which in turn should have two subfolders containing the two possible labels for your use case.
 
 *Note:* This process could be automated by using the ```os``` module. Feel free to implement it in the ```save_feature()``` function present on the ```audio_util.py``` file.
 ``` 
