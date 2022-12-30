@@ -44,7 +44,7 @@ In the table bellow, all the required changes are presented:
 | ```STEP_SIZE``` | Should be changed to the step size selected on the metadata preparation phase.
 | ```SAMPLE_RATE``` | Number of samples in one second of audio. This ensures that all data has the same dimensions.
 | ```MONO``` | ```True``` to transform the audio clip to mono (one channel). ```False``` if the original ammount of channels is required.
-| ```DATASET_DIR``` | Should be changed the metadata CSV file path.
+| ```DATASET_DIR``` | Should be changed to the metadata CSV file path.
 | ```BASE_FEATURE_SAVE_DIR``` | Should be changed to the directory path where you wish to store the audio features.
 
 Inside your ```BASE_FEATURE_SAVE_DIR``` create five subfolders: ```cqt```, ```mfcc```, ```stft```, ```mel``` and ```chroma```. These folders represent the location where each audio feature data will be stored. Inside of each of these create a folder for each set: ```training```, ```validation``` and ```testing``` which in turn should have two subfolders containing the two possible labels for your use case.
