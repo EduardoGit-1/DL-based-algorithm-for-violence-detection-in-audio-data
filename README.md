@@ -43,9 +43,9 @@ In the table bellow, all the required changes are presented:
 | ```DURATION``` | Should be changed to the window size selected on the metadata preparation phase.
 | ```STEP_SIZE``` | Should be changed to the step size selected on the metadata preparation phase.
 | ```SAMPLE_RATE``` | Number of samples in one second of audio. This ensures that all data has the same dimensions.
-| ```MONO``` | ```True``` if to transform the audio clip to mono (one channel). ```False``` if the original ammount of channels is required.
+| ```MONO``` | ```True``` to transform the audio clip to mono (one channel). ```False``` if the original ammount of channels is required.
 | ```DATASET_DIR``` | Should be changed the metadata CSV file path.
-| ```BASE_FEATURE_SAVE_DIR``` | Should be changed to the directory where the audio features will be saved.
+| ```BASE_FEATURE_SAVE_DIR``` | Should be changed to the directory path where you wish to store the audio features.
 
 Inside your ```BASE_FEATURE_SAVE_DIR``` create five subfolders: ```cqt```, ```mfcc```, ```stft```, ```mel``` and ```chroma```. These folders represent the location where each audio feature data will be stored. Inside of each of these create a folder for each set: ```training```, ```validation``` and ```testing``` which in turn should have two subfolders containing the two possible labels for your use case.
 
@@ -79,14 +79,14 @@ The ```models/{ARCHITECTURE_NAME}/main.py``` directory contains the implementati
 | ```DURATION``` | Specifies the current run number, alter accordingly.
 | ```DURATION``` | Should be changed to the window size selected on the metadata preparation phase.
 | ```STEP_SIZE``` | Should be changed to the step size selected on the metadata preparation phase.
-| ```INPUT_TYPE``` | This variable should be changed to the subfolder name of the wanted audio feature (e.g "mfcc").
+| ```INPUT_TYPE``` | This variable should be changed to the subfolder name of the audio feature that will be used as input (e.g "mfcc").
 | ```TRAINING_DIR``` |  Alter the base path accordingly.
 | ```VALIDATION_DIR``` | Alter the base path accordingly.
 | ```TESTING_DIR``` |  Alter the base path accordingly.
-| ```MODEL_PATH_LOSS``` | Change this variable to the directory where optmized model weights for the loss function should be saved.
-| ```MODEL_PATH_F1SCORE``` | Change this variable to the directory where optmized model weights for F1-score should be saved.
-| ```TRAINING_LOG_DIR``` | Change this variable to the directory where training CSV log should be saved.
-| ```evaluation_log_dir``` | Change this variable to the directory where evaluated model log (on the respective test set) should be saved.
+| ```MODEL_PATH_LOSS``` | Change this variable to the directory path where the optmized model weights for the loss function should be stored.
+| ```MODEL_PATH_F1SCORE``` | Change this variable to the directory path where the optmized model weights for F1-score should be saved.
+| ```TRAINING_LOG_DIR``` | Change this variable to the directory path where the training CSV log file should be saved.
+| ```evaluation_log_dir``` | Change this variable to the directory where evaluated model log file (on the respective test set) should be saved.
 
 In order to run the model training, use the following bash script. Please alter the ```{ARCHITECTURE_NAME}``` to the desired architecture.
 
