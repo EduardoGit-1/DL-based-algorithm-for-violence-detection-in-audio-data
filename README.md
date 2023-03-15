@@ -77,7 +77,7 @@ The ```models/{ARCHITECTURE_NAME}/main.py``` directory contains the implementati
  | Variable         | Required changes |
 | :------------------:|---------------|
 | ```DURATION``` | Specifies the current run number, alter accordingly.
-| ```DURATION``` | Should be changed to the window size selected on the metadata preparation phase.
+| ```WINDOW_SIZE``` | Should be changed to the window size selected on the metadata preparation phase.
 | ```STEP_SIZE``` | Should be changed to the step size selected on the metadata preparation phase.
 | ```INPUT_TYPE``` | This variable should be changed to the subfolder name of the audio feature that will be used as input (e.g "mfcc").
 | ```TRAINING_DIR``` |  Alter the base path accordingly.
